@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>is_email_or_phone_blank</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+ISBLANK( $User.Email),
+ISBLANK( $User.Phone ) )</errorConditionFormula>
+    <errorMessage>Email and phone are required fields make sure to fill them up.</errorMessage>
+</ValidationRule>
