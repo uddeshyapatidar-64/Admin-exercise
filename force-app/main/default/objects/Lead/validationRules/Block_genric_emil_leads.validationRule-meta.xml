@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Block_genric_emil_leads</fullName>
+    <active>true</active>
+    <errorConditionFormula>OR(
+LEFT(LOWER(Email), 5) = &quot;info@&quot;,
+LEFT(LOWER(Email), 8) = &quot;contact@&quot;,
+LEFT(LOWER(Email), 7) = &quot;career@&quot;
+)</errorConditionFormula>
+    <errorDisplayField>Email</errorDisplayField>
+    <errorMessage>The email can not start with info@, contact@, Career@.</errorMessage>
+</ValidationRule>
