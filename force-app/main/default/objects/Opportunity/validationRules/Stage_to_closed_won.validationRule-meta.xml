@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Stage_to_closed_won</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(   
+ISPICKVAL( StageName , &quot;Closed Won&quot;), 
+ISBLANK( NextStep ), 
+ISCHANGED(StageName), 
+PRIORVALUE(StageName) = &quot;Negotiation/Review&quot;, 
+$Profile.Name &lt;&gt; &quot;System Administrator&quot;)</errorConditionFormula>
+    <errorDisplayField>NextStep</errorDisplayField>
+    <errorMessage>Exe 7.2: Must have Next step.</errorMessage>
+</ValidationRule>
