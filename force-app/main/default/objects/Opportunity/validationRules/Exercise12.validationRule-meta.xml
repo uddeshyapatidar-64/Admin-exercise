@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Exercise12</fullName>
+    <active>true</active>
+    <errorConditionFormula>OR(
+    MONTH(CloseDate) &lt;&gt; MONTH(TODAY()),
+    YEAR(CloseDate) &lt;&gt; YEAR(TODAY())
+)</errorConditionFormula>
+    <errorMessage>The close date should be in current month.</errorMessage>
+</ValidationRule>
