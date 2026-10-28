@@ -3,7 +3,7 @@
     <fullName>is_email_or_phone_blank</fullName>
     <active>true</active>
     <errorConditionFormula>AND(
-ISBLANK( $User.Email),
-ISBLANK( $User.Phone ) )</errorConditionFormula>
+ISBLANK( Email),
+ISBLANK( Phone ) )</errorConditionFormula>
     <errorMessage>Email and phone are required fields make sure to fill them up.</errorMessage>
 </ValidationRule>

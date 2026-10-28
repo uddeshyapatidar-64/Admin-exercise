@@ -3,8 +3,8 @@
     <fullName>must_have_10_digits_phone_number</fullName>
     <active>true</active>
     <errorConditionFormula>AND(
-$User.Country = &quot;United States&quot;,
-NOT(REGEX( $User.Phone , &quot;[0-9]{10}&quot;))
+Country = &quot;United States&quot;,
+NOT(REGEX(   Phone , &quot;[0-9]{10}&quot;))
 )</errorConditionFormula>
     <errorDisplayField>Phone</errorDisplayField>
     <errorMessage>Phone number should be more then 10 digits</errorMessage>
