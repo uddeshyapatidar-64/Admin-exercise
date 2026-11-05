@@ -2,12 +2,24 @@
 <Flow xmlns="http://soap.sforce.com/2006/04/metadata">
     <apiVersion>68.0</apiVersion>
     <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <constants>
+        <name>Object_name</name>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>College__c</stringValue>
+        </value>
+    </constants>
     <customProperties>
         <name>ScreenProgressIndicator</name>
         <value>
             <stringValue>{&quot;location&quot;:&quot;top&quot;,&quot;type&quot;:&quot;simple&quot;}</stringValue>
         </value>
     </customProperties>
+    <ends>
+        <name>END_ELEMENT_2</name>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+    </ends>
     <environments>Default</environments>
     <formulas>
         <name>MinimumDOB</name>
@@ -30,7 +42,7 @@
     <processMetadataValues>
         <name>CanvasMode</name>
         <value>
-            <stringValue>FREE_FORM_CANVAS</stringValue>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
         </value>
     </processMetadataValues>
     <processMetadataValues>
@@ -43,8 +55,8 @@
     <recordCreates>
         <name>Create_Student</name>
         <label>Create Student</label>
-        <locationX>795</locationX>
-        <locationY>209</locationY>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
         <assignRecordIdToReference>varStudent.Id</assignRecordIdToReference>
         <connector>
             <targetReference>Success_Screen</targetReference>
@@ -58,7 +70,7 @@
         <inputAssignments>
             <field>College__c</field>
             <value>
-                <elementReference>College.recordName</elementReference>
+                <elementReference>Get_College.Id</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -78,8 +90,8 @@
     <recordLookups>
         <name>Get_College</name>
         <label>Get College</label>
-        <locationX>266</locationX>
-        <locationY>279</locationY>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>Enter_Student_Detail</targetReference>
@@ -99,8 +111,8 @@
     <screens>
         <name>Enter_Student_Detail</name>
         <label>Enter Student Detail</label>
-        <locationX>450</locationX>
-        <locationY>209</locationY>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>true</allowPause>
@@ -178,8 +190,8 @@ NOT(ISBLANK({!Date_of_Birth})),
     <screens>
         <name>Review_Enrollment</name>
         <label>Review Enrollment</label>
-        <locationX>612</locationX>
-        <locationY>306</locationY>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>true</allowPause>
@@ -205,8 +217,8 @@ NOT(ISBLANK({!Date_of_Birth})),
     <screens>
         <name>Select_college</name>
         <label>Select college</label>
-        <locationX>109</locationX>
-        <locationY>215</locationY>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
         <allowBack>false</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>true</allowPause>
@@ -220,7 +232,7 @@ NOT(ISBLANK({!Date_of_Birth})),
             <inputParameters>
                 <name>objectApiName</name>
                 <value>
-                    <stringValue>Account</stringValue>
+                    <stringValue>Student__c</stringValue>
                 </value>
             </inputParameters>
             <inputParameters>
@@ -232,7 +244,7 @@ NOT(ISBLANK({!Date_of_Birth})),
             <inputParameters>
                 <name>fieldApiName</name>
                 <value>
-                    <stringValue>Name</stringValue>
+                    <stringValue>College__c</stringValue>
                 </value>
             </inputParameters>
             <inputParameters>
@@ -259,11 +271,14 @@ NOT(ISBLANK({!Date_of_Birth})),
     <screens>
         <name>Success_Screen</name>
         <label>Success Screen</label>
-        <locationX>938</locationX>
-        <locationY>296</locationY>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>true</allowPause>
+        <connector>
+            <targetReference>END_ELEMENT_2</targetReference>
+        </connector>
         <fields>
             <name>Enrollment_done</name>
             <fieldText>&lt;pre class=&quot;ql-syntax&quot; spellcheck=&quot;false&quot;&gt;Student enrollment completed successfully!
@@ -284,8 +299,8 @@ The student record has been created.
         <showHeader>true</showHeader>
     </screens>
     <start>
-        <locationX>52</locationX>
-        <locationY>67</locationY>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
         <connector>
             <targetReference>Select_college</targetReference>
         </connector>

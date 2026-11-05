@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label>Lead Source Campaign Mapping</label>
+    <pluralLabel>Lead Source Campaign Mappings</pluralLabel>
+    <visibility>Public</visibility>
+</CustomObject>

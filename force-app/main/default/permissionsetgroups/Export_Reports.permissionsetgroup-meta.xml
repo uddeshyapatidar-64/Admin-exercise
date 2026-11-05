@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSetGroup xmlns="http://soap.sforce.com/2006/04/metadata">
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>Export Reports</label>
+    <mutingPermissionSets>Intern_Report_Export_Muting</mutingPermissionSets>
+    <permissionSets>Report_Export_Access</permissionSets>
+    <status>Updated</status>
+</PermissionSetGroup>

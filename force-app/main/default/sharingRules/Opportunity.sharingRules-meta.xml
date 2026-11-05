@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sharingOwnerRules>
+        <fullName>Share_APAC_Opportunities</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>Share APAC Opportunities</label>
+        <sharedTo>
+            <group>APAC_Sales_Reps</group>
+        </sharedTo>
+        <sharedFrom>
+            <role>Sales_Director_APAC</role>
+        </sharedFrom>
+    </sharingOwnerRules>
+</SharingRules>
